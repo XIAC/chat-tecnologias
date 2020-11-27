@@ -8,7 +8,7 @@ export default function App(){
   const [nombreUsuario, setNombreUsuario] = useState(null);
   return(
     <Container style= {estilo.contenedor}>
-        { !nombreUsuario ? (<Login/>) : (<Chat/>)}
+        { !nombreUsuario ? (<Login setNombreUsuario={setNombreUsuario}/>) : (<Chat/>)}
     </Container>
   );
 }
