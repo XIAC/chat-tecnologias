@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 var firebaseConfig = {
     apiKey: "AIzaSyCmvuvbZMBcspDV9qpDw5OSRv778OhqVuo",
     authDomain: "chatapp-da20c.firebaseapp.com",

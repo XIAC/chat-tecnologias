@@ -4,14 +4,20 @@ import Input from '../componentes/Input';
 import firebase from '../utils/firebase';
 import 'firebase/database';
 export default function Chat() {
-  // envio de datos a firebase
-  //recoger los datosdel mensaje 
-  // firebase.database().ref('ejemplo').push({mensaje: "aqui su mensaje"});
+  const enviarMensaje = (mensaje) =>{
+    console.log("chat",mensaje);
+    firebase
+      .database().ref('general').push({
+        nombreUsuario: 'NULL',
+        text: mensaje,
+        time: "NULL"
+      });
+  }
   return (
     <>
       <View style={estilo.contenido}>
-        <Text>Este es la pantalla del Chat</Text>
-        <Input/>
+        <Text>Chat</Text>
+        <Input enviarMensaje={enviarMensaje}/>    
       </View>
     </>
 
